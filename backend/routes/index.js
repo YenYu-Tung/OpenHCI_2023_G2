@@ -51,53 +51,17 @@ client.on('reconnect', () => {
 client.on('connect', () => {
 	console.log('Client connected:' + clientId);
 	client.subscribe(topic1, { qos: 0 });
-	//client.subscribe('phone_topic', { qos: 0 });
-	// setInterval(() => {
-	//   client.publish("sohappy", "sohappy", { qos: 0, retain: false });
-	// }, 1000);
+
 });
 client.on('message', (topic, message, packet) => {
 	console.log('Topic '+topic+' is connected~');
 	msg = message.toString();
 	console.log('msg : ' + msg);
-	//ws.send(JSON.stringify(msg));
+	//傳送到frontend
+	//..
 
 });
-/*
-//當 WebSocket 從外部連結時執行
-wss.on('connection', ws => {
-	//連結時執行此 console 提示
-	console.log('Client connected');
-	client.on('message', (topic, message, packet) => {
-			console.log('Topic '+topic+' is connected~');
-			msg = message.toString();
-			console.log('msg : ' + msg);
-			ws.send(JSON.stringify(msg));
-		
-		//if (topic === 'phone_topic') {
-		//	let msg2 = message.toString();
-		//	console.log('msg : ' + msg2);
-		//}
-	});
-*/
-/*
-	ws.on('message', data => {
-		let value = JSON.parse(data);
-		console.log('value : ' + value.status);
-		let signal = '';
-		if (value.status == true) {
-			signal = 'open';
-		} else {
-			signal = 'close';
-		}
-		client.publish('phone_topic', signal, { qos: 0, retain: false });
-	});
-	//當 WebSocket 的連線關閉時執行
-	ws.on('close', () => {
-		console.log('Close connected');
-	});
-});
-*/
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
