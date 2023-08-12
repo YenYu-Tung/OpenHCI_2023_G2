@@ -38,6 +38,7 @@ p {
   width: 100%;
   margin: 0;
   padding: 0;
+  justify-content: center;
 }
 
 .flex {
@@ -111,11 +112,9 @@ p {
   .flex{
     padding-top: 0%;
   }
-
   .content {
     height: 30vh;
   }
-
   h1 {
     font-size: 24px;
   }
@@ -135,25 +134,17 @@ p {
   top: -560px;
   /* bottom: 0; */
   left: 0;
-  animation: appear 2s forwards, move 10s infinite alternate,
+  animation: appear 2s forwards, move 20s infinite alternate,
     float 5s infinite;
-  /* display: none; */
+  display: inline-block;
 }
 .bottle2 {
   z-index: 3;
   position: absolute;
   top: -530px;
   left: 0;
-  animation: move 7s infinite alternate, float 5s infinite;
+  animation: appear 2s forwards, disappear 2s;
   /* display: none; */
-}
-.bottle3 {
-  z-index: 4;
-  position: absolute;
-  top: -560px;
-  left: 0;
-  animation: move 10s infinite alternate, float 5s infinite; 
-  /* display: none;  */
 }
 
 @keyframes appear{
@@ -166,7 +157,6 @@ p {
     opacity: 1;
   }
 }
-
 @keyframes move {
   from {
     left: -100px;
@@ -179,15 +169,26 @@ p {
 }
 @keyframes float {
   0%, 100% {
-    transform: translateY(0) translate3d(0px, 0px, 0px) rotateZ(-2deg);;
+    transform: translateY(0) translate3d(0px, 0px, 0px) rotateZ(-2deg);
   }
   50% {
     transform: translateY(-20px) translate3d(0px, 10px, 10px) rotateZ(5deg);
   }
 }
-
-
-
+@keyframes disappear{
+  0%{
+    opacity: 1;
+    /* Starting opacity */
+  }  
+  50% {
+    opacity: 0.5;
+    /* Disappearing */
+  }
+  100% {
+    opacity: 0;
+    /* Disappearing */
+  }
+}
 
 .splash {
   z-index: 10;
@@ -216,16 +217,32 @@ p {
 }
 
 .description1 {
-  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
   font-size: 18px;
+  border: solid 2px #ffffff;
+  border-radius: 10px;
+  /* padding-top: 30px;
+  padding-left: 15px; */
+  flex-direction: column;
+  justify-content: center;
+  width: 230px;
+  height: 90px;
+  /* text-align: right; */
+}
+button{
+  /* float: right; */
+  /* max-width: 80px; */
+  border: solid 2px #87CEEB;
+  margin-top: 6px;
+  padding: 3px 1px;
+  border-radius: 10px;
 }
 .description2 {
   display: none;
-  font-size: 18px;
-}
-.description3 {
-  display: none;
-  font-size: 18px;
+  font-size: 18px;  
 }
 
 .visible{
