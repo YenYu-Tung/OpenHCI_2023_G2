@@ -1,0 +1,39 @@
+body{
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-image: url('BGphone.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.buttondiv{
+  display: flex;
+  justify-content: space-around;
+}
+
+.card{
+  /* margin-top: 30%; */
+  margin: 0% auto 1% auto;
+}
+.button{
+  background-color: #496B95;
+  color: rgb(253, 253, 253);
+  padding: 2% 13%;
+  border-radius: 0.25rem;
+}
+a{
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .icon{
+    margin-top: 10%;
+    max-width: 30rem;
+  }
+  .card{
+    margin: 15% auto 0% auto;
+  }
+}

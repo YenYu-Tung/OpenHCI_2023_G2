@@ -105,6 +105,7 @@ void connectWifi(){
   while (WiFi.begin(ssid, pass) != WL_CONNECTED) {
     // failed, retry
     Serial.print(".");
+    Serial.print("HI ");
     delay(5000);
   }
   

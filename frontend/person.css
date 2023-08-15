@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,500');
+:root {
+  --color-dark: #161616;
+  --color-ocean: #416dea;
+  --color-grass: #3dd28d;
+  --color-snow: #FFFFFF;
+  --color-salmon: #F32C52;
+  --color-sun: #feee7d;
+  --color-alge: #7999a9;
+  --color-flower: #353866;
+  --color-smoke: #e4e4e4;
+
+  --borderRadius: 36px;
+
+  --font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+span{
+  font-family: 'Roboto';
+  /* font-weight: 50; */
+  font-size: 14px;
+  color: #ffffff;  
+
+}
+
+
+body {
+  display: flex;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  background: whitesmoke;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-image: url('BGphone.svg');
+  /* 替换为您的SVG图像URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* 固定背景以避免滚动时背景移动 */
+
+  @media (min-width: 992px) {
+    border-width: 30px;
+  }
+}
+
+body.linked {
+
+  .button,
+  h1 {
+    opacity: .3;
+    transition: opacity 300ms linear;
+  }
+
+  p {
+    color: var(--color-smoke);
+    transition: color 300ms linear;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+
+:root {
+  --primary-color: 17, 64, 92;
+  /* primary-color: #ff502f */
+  --secondary-color: 91, 209, 215;
+  /* secondary-color: #5bd1d7 */
+  --text-color: 0, 77, 97;
+  /* text-color: #004d61 */
+  --gray-light: 224, 224, 224;
+  /* gray-light: #e0e0e0;*/
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
+.chip {
+  padding: 10px 22px;
+  background-color: rgb(var(--gray-light));
+  border-radius: 3rem;
+  display: inline-flex;
+  margin: 10px;
+  color: #353866;
+  background-color: #496B95;
+  align-items: center;
+  height: 64px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.chip .icon {
+  font-size: 20px;
+  color: rgba(0, 0, 0, .54);
+  width: 10px;
+  text-align: center;
+}
+
+.chip .icon--leadind {
+  margin: 2px 20px 0 -4px;
+}
+
+.chip .icon--trailing {
+  margin: 2px -4px 0 4px;
+}
+
+.chips__filter{
+  margin-bottom: 20px;
+}
+
+.chips__choice .chip.chip--active {
+  color: rgb(var(--primary-color));
+  background-color: rgba(var(--primary-color), 0.2);
+}
+
+.chips__filter .chip .chip--check {
+  display: none;
+}
+
+.chips__filter .chip.chip--active .chip--check {
+  display: block;
+}
+
+.button {
+  padding: 0 24px;
+  background-color: #3D8DBA;
+  border-radius: 100px;
+  display: inline-flex;
+  margin: 40px;
+  color: #FFFFFF;
+  align-items: center;
+  height: 64px;
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: #244874;
+  }
+}
+
+h1 {
+  font-size: 1.8rem !important;
+}
+
+.button1 {
+  background-color: #496B95;
+  color: rgb(253, 253, 253);
+  padding: 1.5% 5%;
+  border-radius: 0.6rem;
+}

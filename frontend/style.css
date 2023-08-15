@@ -1,4 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+@import url('https://fonts.googleapis.com/css?family=Roboto:500,500');
 
 body {
   margin: 0;
@@ -9,6 +10,12 @@ h1 {
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 48px;
+}
+.display-remain-time{
+  font-size: 50px;
+  color: black;
+  /* font-family: 'Roboto'; */
+  font-weight: 600;
 }
 
 p {
@@ -21,7 +28,7 @@ p {
 .header {
   position: relative;
   text-align: center;
-  background: linear-gradient(60deg, rgb(118, 98, 197) 0%, rgba(0, 172, 193, 1) 100%);
+  background: linear-gradient(60deg, rgb(118, 170, 203) 0%, rgb(104, 170, 179) 100%);
   color: white;
 }
 
@@ -39,6 +46,11 @@ p {
   margin: 0;
   padding: 0;
   justify-content: center;
+  background-image: url(BG.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .flex {
@@ -62,10 +74,14 @@ p {
 
 .content {
   position: relative;
-  height: 30vh;
+  height: 20vh;
   text-align: center;
   /* background-color: rgb(33, 10, 113); */
-  background-color: rgb(38, 22, 128);
+  /* background-color: rgba(121, 177, 187); */
+  background: rgb(36, 72, 116);
+  /* opacity: .; */
+  /* color: rgba(121, 177, 187, 0.6); */
+  
 }
 
 /* Animation */
@@ -118,6 +134,9 @@ p {
   h1 {
     font-size: 24px;
   }
+  .description1 {
+    font-size: 14px;
+  }
 }
 
 
@@ -128,42 +147,54 @@ p {
   height: 100%;
   width: 100%
 } */
-.bottle1 {
+.bottle1 , .bottle5{
   z-index: 2;
   position: absolute;
-  top: -560px;
+  top: 200px;
   /* bottom: 0; */
-  left: 0;
+  left: 300px;
   animation: appear 2s forwards, move 20s infinite alternate,
     float 5s infinite;
-  display: inline-block;
+  /* display: inline-block; */
+}
+.bottle3, .bottle4{
+  /* transform: scaleY(-1); */
+  z-index: 2;
+  position: absolute;
+  top: 190px;
+  /* bottom: 0; */
+  left: 360px;
+  animation: appear 2s forwards, move 30s infinite alternate,
+    float 6s infinite;
+  /* display: inline-block; */
 }
 .bottle2 {
   z-index: 3;
   position: absolute;
-  top: -530px;
-  left: 0;
-  animation: appear 2s forwards, disappear 2s;
+  top: 200px;
+  left: 350px;
+  animation: appear 2s, disappear 2s;
+  display: inline-block;
   /* display: none; */
 }
 
 @keyframes appear{
   from {
-    top: -970px;
+    top: -1000px;
     opacity: 0.8;
   }
   to {
-    top: -560;
+    top: -600;
     opacity: 1;
   }
 }
 @keyframes move {
   from {
-    left: -100px;
+    left: 100px;
     /* Initial position */
   }
   to {
-    left: 400px;
+    left: 500px;
     /* Final position */
   }
 }
@@ -181,11 +212,11 @@ p {
     /* Starting opacity */
   }  
   50% {
-    opacity: 0.5;
+    opacity: 0.75;
     /* Disappearing */
   }
   100% {
-    opacity: 0;
+    opacity: 0.5;
     /* Disappearing */
   }
 }
@@ -197,7 +228,7 @@ p {
   left: 0;
   width: 150px;
   height: 150px;
-  background-color: #87CEEB;
+  background-color: #573906;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   animation: splashAnimation 1.5s ease-out forwards;
 }
@@ -217,27 +248,35 @@ p {
 }
 
 .description1 {
-  position: relative;
+  /* position: relative;
   top: 0;
   left: 0;
-  display: flex;
-  font-size: 18px;
+  display: flex; */
+  font-size: 16px;
   border: solid 2px #ffffff;
   border-radius: 10px;
   /* padding-top: 30px;
   padding-left: 15px; */
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column;
+  justify-content: center; */
   width: 230px;
   height: 90px;
   /* text-align: right; */
+  position: absolute;
+  top: 45%;
+  /* left: 25%; */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* 透明黑色背景 */
+  color: white;
+  padding: 10px;
+  z-index: 10;
 }
 button{
   /* float: right; */
   /* max-width: 80px; */
   border: solid 2px #87CEEB;
-  margin-top: 6px;
-  padding: 3px 1px;
+  margin-top: 3.5%;
+  padding: 3px 13px;
   border-radius: 10px;
 }
 .description2 {
@@ -248,3 +287,39 @@ button{
 .visible{
   display: flex;
 }
+
+img{
+  min-height: 100%;
+  width: 100%;    
+}
+
+.timer{
+  display: flex;
+}
+.timer p{
+  font-size: 50px;
+  color: black;
+  /* font-family: 'Roboto'; */
+  font-weight: 600;
+  margin: 0 18px;
+}
+
+.overlay {
+  position: relative;
+  width: 50%;
+  height: 20%;
+  /* top: -80px;
+  left: 25%; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* 半透明背景*/
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  z-index: 999;
+}
+
+.centered {
+  max-width: 80%;
+  max-height: 80vh;
+}
+

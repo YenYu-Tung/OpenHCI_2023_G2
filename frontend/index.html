@@ -3,103 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <!-- <link rel="stylesheet" href="styles.css"> -->  
-  <title>OpenHCI 2023 G2</title>
+  <link rel="stylesheet" href="./mainpage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  <title>Main Page</title>
 </head>
 <body>
-  <!--Hey! This is the original version
-  of Simple CSS Waves-->  
-  <div class="header">
-    <!--Content before waves-->
-    <div class="inner-header flex">      
-      <div class="description1" style="display: none;">
-        <!-- <div class="cancel"> cancel </div> -->        
-        <div>
-          Title <br>
-          This is an important message.
-        </div>
-        <button onclick="cancel()">cancel</button>
+  <img src="icon.svg" class="card-img-top mx-auto d-block icon" alt="..." style="max-width: 13rem;">
+  <div class="card" style="max-width: 13rem;">    
+    <div class="card-body text-center">
+      <div>
+        <img src="checkperson.svg" class="card-img-top" alt="...">
       </div>
-    </div>  
-    <!--Waves Container-->
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 26 150 28" preserveAspectRatio="none" shape-rendering="auto"> <!-- minx miny width height-->
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0
-                58-18 88-18s
-                58 18 88 18
-                58-18 88-18
-                58 18 88 18
-                v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(40, 16, 130, 0.6)" />
-          <use xlink:href="#gentle-wave" x="50" y="3" fill="rgba(40, 16, 100, 0.3)" />
-          <use xlink:href="#gentle-wave" x="50" y="5" fill="rgba(40, 16, 120, 0.5)" />
-          <use xlink:href="#gentle-wave" x="50" y="2" fill="rgba(40, 16, 130, 0.3)" />
-          <use xlink:href="#gentle-wave" x="50" y="1" fill="rgba(40, 16, 120, 0.4)" />
-          <use xlink:href="#gentle-wave" x="50" y="7" fill="rgba(40, 16, 130, 0.3)" />
-        </g>
-      </svg>            
-      <!-- <div id="lottie"> </div> -->
-    <!--Waves end-->  
-  </div>
-  <div class="bottle1" style="display: none"> 
-    <svg xmlns="http://www.w3.org/2000/svg" width="1600px" height="1000" viewBox="1300 -1130 100 1500">
-      <g id="bottle1">
-        <path fill="#FFFFFF" d="M589.59,332.821c6.882,1.926,13.794,3.701,20.812,5.024c4.953,0.352,9.882,0.345,14.836-0.011
-        		c1.066-0.204,2.126-0.431,3.187-0.659c5.371-10.27,9.474-18.127,9.509-18.232l0.093-0.027c8.667-16.526-5.036-10.668,5.175-32.325
-        		l10.401-19.835l-13.808-7.24l-10.467,19.961c-11.961,20.557-14.931,6.019-23.58,22.513l0.029,0.092
-        		C605.686,302.203,597.821,317.157,589.59,332.821z" />
-        <rect x="641.23" y="254.555" transform="matrix(0.8856 0.4644 -0.4644 0.8856 196.4175 -269.9889)" fill="#C7A66F"
-          width="10.258" height="18.461" />
-        <path fill="#FFFFFF" d="M653.436,273.045c-0.365,0.695-1.232,0.967-1.927,0.602l-16.188-8.488
-        		c-0.695-0.365-0.966-1.232-0.602-1.928l2.083-3.972c0.365-0.695,1.232-0.966,1.927-0.601l16.188,8.489
-        		c0.695,0.364,0.966,1.23,0.602,1.926L653.436,273.045z" />
-        <path fill="rgba(73, 110, 198, 0.2)" d="M579.017,352.949c-4.666,8.884-8.058,15.347-8.058,15.347c-1.54,2.937-0.408,6.566,2.529,8.106
-        		l21.672,11.364c2.937,1.54,6.566,0.408,8.106-2.529c0,0,9.991-19.073,19.247-36.759
-        		C608.212,351.517,593.521,353.153,579.017,352.949z" />
-      </g>
-    </svg>
-    
-  </div>  
-  <div class="bottle2" style="display: none">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1600px" height="1000" viewBox="1200 -1130 200 1500">
-      <g id="bottle2">
-        <path fill="#FFFFFF" d="M589.59,332.821c6.882,1.926,13.794,3.701,20.812,5.024c4.953,0.352,9.882,0.345,14.836-0.011
-                    		c1.066-0.204,2.126-0.431,3.187-0.659c5.371-10.27,9.474-18.127,9.509-18.232l0.093-0.027c8.667-16.526-5.036-10.668,5.175-32.325
-                    		l10.401-19.835l-13.808-7.24l-10.467,19.961c-11.961,20.557-14.931,6.019-23.58,22.513l0.029,0.092
-                    		C605.686,302.203,597.821,317.157,589.59,332.821z" />
-        <rect x="641.23" y="254.555" transform="matrix(0.8856 0.4644 -0.4644 0.8856 196.4175 -269.9889)" fill="#C7A66F"
-          width="10.258" height="18.461" />
-        <path fill="#FFFFFF" d="M653.436,273.045c-0.365,0.695-1.232,0.967-1.927,0.602l-16.188-8.488
-                    		c-0.695-0.365-0.966-1.232-0.602-1.928l2.083-3.972c0.365-0.695,1.232-0.966,1.927-0.601l16.188,8.489
-                    		c0.695,0.364,0.966,1.23,0.602,1.926L653.436,273.045z" />
-        <path fill="rgba(73, 110, 198, 0.2)" d="M579.017,352.949c-4.666,8.884-8.058,15.347-8.058,15.347c-1.54,2.937-0.408,6.566,2.529,8.106
-                    		l21.672,11.364c2.937,1.54,6.566,0.408,8.106-2.529c0,0,9.991-19.073,19.247-36.759
-                    		C608.212,351.517,593.521,353.153,579.017,352.949z" />
-      </g>
-    </svg>
-    <div class="description2">
-      <!-- Detail description -->
-      Detail description <br>
-      This is an unimportant message.
+      <p class="card-text">要設定重要聯絡人嗎?
+      </p>
+      <div class="buttondiv">
+        <a href="./timer.html" class="button" style="text-decoration: none;">否</a>
+        <a href="./person.html" class="button" style="text-decoration: none;">是</a>
+      </div>     
     </div>
   </div>
-  </div>
-  <!--Header ends-->  
-  <!--Content starts-->
-  <div class="content flex">
-    <p>Copyright © 2023 OpenHCI Group2. All rights reserved.</p>
-  </div>
-  <div class="sammy"></div>
-  <!--Content ends-->  
-  <script src="main.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script> -->
-  <!-- <script src=data.json></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/parallax.min.js"></script>
 </body>
 </html>
-
